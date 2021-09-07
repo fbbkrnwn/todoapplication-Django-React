@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Modal from "./components/Modal";
 import axios from "axios";
+import './App.css'
 
 class App extends Component {
   constructor(props) {
@@ -72,16 +73,16 @@ class App extends Component {
 
   renderTabList = () => {
     return (
-      <div className="nav nav-tabs">
+      <div className="nav nav-pills ">
         <span
           onClick={() => this.displayCompleted(true)}
-          className={this.state.viewCompleted ? "nav-link active" : "nav-link"}
+          className={this.state.viewCompleted ? "btn btn-sm btn-outline-dark active rounded-lg" : "btn btn-sm btn-outline-dark mr-2 rounded-lg"}
         >
           Complete
         </span>
         <span
           onClick={() => this.displayCompleted(false)}
-          className={this.state.viewCompleted ? "nav-link" : "nav-link active"}
+          className={this.state.viewCompleted ? "btn btn-sm btn-outline-dark ml-2 rounded-lg" : "btn btn-sm btn-outline-dark active rounded-lg"}
         >
           Incomplete
         </span>
